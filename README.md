@@ -1,4 +1,5 @@
 # findChildNode
+[![npm version](https://badge.fury.io/js/find-child-node.svg)](https://badge.fury.io/js/find-child-node)
 findChildNode is able to find a child node in a json object parsed by [parse5](https://github.com/inikulin/parse5).
 
 ## Installation
