@@ -33,13 +33,24 @@ module.exports = function() {
     findChildNode.byAttribute = (childNodes, key, value) => {
         var returnNode = null;
         
-        childNodes.forEach((node) => {
-            if(node.attrs && node.attrs[0] 
-                && node.attrs[0].name == key 
-                && node.attrs[0].value == value) {
-                returnNode = node;
-            }
-        });
+        try {
+            childNodes.forEach((node) => {
+                if(node.attrs && node.attrs[0] 
+                    && node.attrs[0].name == key 
+                    && node.attrs[0].value == value) {
+                    returnNode = node;
+                    throw BreakException;
+                } else if(node.childNodes) {
+                    var returnValue = findChildNode.byAttribute(node.childNodes, key, value);
+                    if(returnValue) {
+                        returnNode = returnValue;
+                        throw BreakException;
+                    }
+                }
+            });
+        } catch(e) {
+
+        }
 
         return returnNode;
     }

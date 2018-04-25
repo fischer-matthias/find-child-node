@@ -4,7 +4,7 @@
   "description": "Searches childNode by a specific identifier",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/karma/bin/karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/fischer-matthias/find-child-node/issues"
   },
-  "homepage": "https://github.com/fischer-matthias/find-child-node#readme"
+  "homepage": "https://github.com/fischer-matthias/find-child-node#readme",
+  "devDependencies": {
+    "browserify": "^16.2.0",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.2",
+    "karma-browserify": "^5.2.0",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-jasmine": "^1.1.1"
+  }
 }
