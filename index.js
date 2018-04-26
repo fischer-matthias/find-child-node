@@ -35,12 +35,25 @@ module.exports = function() {
         
         try {
             childNodes.forEach((node) => {
-                if(node.attrs && node.attrs[0] 
-                    && node.attrs[0].name == key 
-                    && node.attrs[0].value == value) {
-                    returnNode = node;
-                    throw BreakException;
-                } else if(node.childNodes) {
+                if(node.attrs) {
+
+                    try {
+                        node.attrs.forEach((attribute) => {
+                            if(attribute.name == key 
+                                && attribute.value == value) {
+                                returnNode = node;
+                                throw BreakException;
+                            }
+                        });
+                    } catch(e) {}
+
+                    if(returnNode != null) {
+                        throw BreakException;
+                    }
+
+                }
+
+                if(node.childNodes && returnNode == null) {
                     var returnValue = findChildNode.byAttribute(node.childNodes, key, value);
                     if(returnValue) {
                         returnNode = returnValue;
