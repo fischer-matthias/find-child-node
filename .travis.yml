@@ -1,0 +1,23 @@
+# programming language settings
+language: node_js
+node_js:
+  - "node"
+
+# caching to speed up the build process
+cache:
+  directories:
+    - ./node_modules
+
+# log information
+before_install:
+  - node --version
+  - npm --version
+  - ls -la
+
+# install dependencies
+install:
+  - npm i
+
+# test
+script:
+  - npm run test

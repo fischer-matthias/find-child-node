@@ -1,4 +1,6 @@
+[![Build Status](https://travis-ci.org/fischer-matthias/find-child-node.svg?branch=master)](https://travis-ci.org/fischer-matthias/find-child-node)
 [![npm version](https://badge.fury.io/js/find-child-node.svg)](https://badge.fury.io/js/find-child-node)
+[![Package status](https://david-dm.org/fischer-matthias/find-child-node.svg)](https://badge.fury.io/js/find-child-node)
 
 # findChildNode
 findChildNode is able to find a child node in a json object parsed by [parse5](https://github.com/inikulin/parse5).

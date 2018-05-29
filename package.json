@@ -1,6 +1,6 @@
 {
   "name": "find-child-node",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Searches childNode by a specific identifier",
   "main": "index.js",
   "scripts": {
