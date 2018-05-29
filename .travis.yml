@@ -18,6 +18,6 @@ before_install:
 install:
   - npm i
 
-# build
+# test
 script:
-  - npm run build
+  - npm run test
